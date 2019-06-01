@@ -2,6 +2,7 @@
 #include<ctime>
 #include<curses.h>
 #include<cstdlib>
+#include <unistd.h>
 using namespace std;
   //直的還有6.5 
 class easy {
@@ -942,24 +943,45 @@ public:
 	void skyfall()//天降
 	{
 	
-		for (int i = 5; i > 0; i--)
+		for (int i = 0; i <6; i++)
 		{
-			if (i - 2 > 0) {
-				if (fruit[i][0] == -1)
+			
+			for (int j = 0; j < 10; j++) {
+
+				if (fruit[i][j] == -1 && i - 1 >= 0)
 				{
-					if (fruit[i - 1][0] != -1)
+					while (i > 0)//天降
 					{
-						fruit[i][0] = fruit[i - 1][0];
+						fruit[i][j] = fruit[i - 1][j];
+
+						i--;
 					}
-					else
+					fruit[0][j] = -1;
+
+				}
+				if (fruit[0][j] == -1) {
+					int temp = (rand() % 5) + 1;
+					switch (temp)
 					{
 
+					case 1:
+						fruit[0][j] = 1;
+						break;
+					case 2:
+						fruit[0][j] = 10;	break;
+					case 3:
+						fruit[0][j] = 100;	break;
+					case 4:
+						fruit[0][j] = 1000;	break;
+					case 5:
+						fruit[0][j] = 10000;	break;
+
 					}
+
 				}
 			}
 		}
-
-
+		
 
 
 
@@ -974,7 +996,7 @@ public:
 
 
 
-
+	bool fuckyet=0;
 	int go_on = 1;
 	int preX;
 	int preY;
@@ -982,7 +1004,11 @@ public:
 	int nextY ;
 	void lets_play_a_game()//play   
 	{
-		
+		clear();
+		refresh();
+		setempty();
+		skyfall();
+		outputfruit();
 		while (go_on)
 		{
 			mvaddstr(5, 30, "target scores : ");
@@ -1028,6 +1054,7 @@ public:
 				nextY = y;
 				swap(fruit[preY][preX], fruit[nextY][nextX]);
 				remainsteps--;
+				fuckyet = 1;
 				break;
 			case KEY_LEFT: --x; mvaddstr(10, 54, "Left "); break;
 			case KEY_RIGHT: ++x; mvaddstr(10, 54, "Right"); break;
@@ -1043,16 +1070,33 @@ public:
 			// while (go_on)
 
 
+			
+			
 			clear();
 			refresh();
 			setempty();
-			skyfall();
 			outputfruit();
-			setempty();
-			skyfall();
+			if (fuckyet)
+			{
+				usleep(100000);
+			}
 			clear();
 			refresh();
+
+			skyfall();
+			setempty();
+			skyfall();
+			setempty();
+			skyfall();
+			setempty();
+			skyfall();
+			setempty();
+			skyfall();
+			setempty();
+			skyfall();
+			setempty();
 			outputfruit();
+			fuckyet = 0;
 		}
 		
 	}
