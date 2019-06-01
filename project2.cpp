@@ -85,7 +85,7 @@ public:
 		mvprintw(i, 10, "\n");
 	}
 	}
-	
+	//一顆100分
 	void setempty()//判斷可消後，消掉並設為-1
 	{
 		//------------------------------------------------------橫的-------------------------------------------//
@@ -105,7 +105,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8]=fruit[i][j+9] = -1;
 
-
+						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
@@ -115,7 +115,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7]=fruit[i][j+8] = -1;
 
-
+						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
@@ -125,7 +125,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
 
-
+						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
@@ -135,7 +135,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5]=fruit[i][j+6] = -1;
 
-
+						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
@@ -145,7 +145,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] =fruit[i][j+5]= -1;
 
-
+						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
@@ -154,7 +154,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j+4]=-1;
-
+						score += 500;
 
 					}
 				}
@@ -164,7 +164,7 @@ public:
 					{
 						
 							fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
-						
+							score += 400;
 				
 					}
 				}
@@ -173,7 +173,7 @@ public:
 
 					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2]  = -1;
 				
-
+					score += 300;
 
 				}
 			}
@@ -188,11 +188,11 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //九個
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //10個
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
-
+						score += 1000;
 
 					}
 				}
@@ -203,7 +203,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
 
-
+						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
@@ -212,7 +212,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
-
+						score += 800;
 
 					}
 				}
@@ -223,7 +223,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
 
-
+						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
@@ -233,7 +233,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
 
-
+						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
@@ -243,7 +243,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
 
-
+						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
@@ -253,7 +253,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
 
-
+						score += 400;
 					}
 				}
 				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30)//三個
@@ -261,7 +261,7 @@ public:
 
 					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
 
-
+					score += 300;
 
 				}
 			}
@@ -280,7 +280,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
-
+						score += 1000;
 
 					}
 				}
@@ -290,7 +290,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
-
+						score += 900;
 
 					}
 				}
@@ -301,7 +301,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
 
-
+						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
@@ -311,7 +311,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
 
-
+						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
@@ -320,7 +320,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
-
+						score += 600;
 
 					}
 				}
@@ -331,7 +331,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
 
-
+						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
@@ -340,7 +340,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
-
+						score += 400;
 
 					}
 				}
@@ -350,7 +350,7 @@ public:
 					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
 
 
-
+					score += 300;
 				}
 			}
 		}
@@ -369,7 +369,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
 
-
+						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
@@ -379,7 +379,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
 
-
+						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
@@ -388,7 +388,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
-
+						score += 800;
 
 					}
 				}
@@ -399,7 +399,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
 
-
+						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
@@ -409,7 +409,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
 
-
+						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
@@ -419,7 +419,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
 
-
+						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
@@ -428,7 +428,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
-
+						score += 400;
 
 					}
 				}
@@ -437,7 +437,7 @@ public:
 
 					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
 
-
+					score += 300;
 
 				}
 			}
@@ -457,7 +457,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
 
-
+						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
@@ -466,7 +466,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
-
+						score += 900;
 
 					}
 				}
@@ -477,7 +477,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
 
-
+						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
@@ -487,7 +487,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
 
-
+						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
@@ -496,7 +496,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
-
+						score += 600;
 
 					}
 				}
@@ -507,7 +507,7 @@ public:
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
 
-
+						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
@@ -516,7 +516,7 @@ public:
 					{
 
 						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
-
+						score += 400;
 
 					}
 				}
@@ -525,7 +525,7 @@ public:
 
 					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
 
-
+					score += 300;
 
 				}
 			}
@@ -538,14 +538,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j]+ fruit[i+5][j]== 6) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j]+ fruit[i+5][j]== 6) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j]=fruit[i+5][j] = -1;
 
 
 
-
+					score += 600;
 
 
 				}
@@ -558,12 +558,12 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] +fruit[i+4][j]== 5) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] +fruit[i+4][j]== 5) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] =fruit[i+4][j]= -1;
 
-
+					score += 500;
 
 
 
@@ -578,14 +578,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4) 
 				{
 				
 						fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
 							
 					
 
-		
+						score += 400;
 
 
 				}
@@ -598,14 +598,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j]  = -1;
 
 
 
-
+					score += 300;
 
 
 				}
@@ -620,13 +620,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
 
 
-
+					score += 600;
 
 
 
@@ -640,13 +640,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
 
 
-
+					score += 500;
 
 
 
@@ -660,13 +660,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
 
 
-
+					score += 400;
 
 
 
@@ -680,14 +680,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
 
 
 
-
+					score += 300;
 
 
 				}
@@ -701,14 +701,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 600) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 600) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
 
 
 
-
+					score += 600;
 
 
 				}
@@ -721,13 +721,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 500) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 500) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
 
 
-
+					score += 500;
 
 
 
@@ -741,14 +741,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 400) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 400) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
 
 
 
-
+					score += 400;
 
 
 				}
@@ -761,14 +761,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
 
 
 
-
+					score += 300;
 
 
 				}
@@ -783,13 +783,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6000) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6000) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
 
 
-
+					score += 600;
 
 
 
@@ -803,13 +803,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5000) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5000) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
 
 
-
+					score += 500;
 
 
 
@@ -823,14 +823,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4000) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4000) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
 
 
 
-
+					score += 400;
 
 
 				}
@@ -843,13 +843,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
 
 
-
+					score += 300;
 
 
 
@@ -864,7 +864,7 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60000) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60000) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
@@ -872,7 +872,7 @@ public:
 
 
 
-
+					score += 600;
 
 				}
 
@@ -884,13 +884,13 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50000) //四個
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50000) 
 				{
 
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
 
 
-
+					score += 500;
 
 
 
@@ -910,7 +910,7 @@ public:
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
 
 
-
+					score += 400;
 
 
 
@@ -930,7 +930,7 @@ public:
 					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
 
 
-
+					score += 300;
 
 
 
@@ -1008,13 +1008,22 @@ public:
 		refresh();
 		setempty();
 		skyfall();
+		setempty();
+		skyfall();
+		setempty();
+		skyfall();
+		setempty();
+		skyfall();
+		setempty();
+		skyfall();
 		outputfruit();
+		score = 0;
 		while (go_on)
 		{
-			mvaddstr(5, 30, "target scores : ");
-			mvprintw(5, 50, "%d", target);
-			mvaddstr(6, 30, "your scores : ");
-			mvprintw(6, 50, "%d", score);
+			mvaddstr(1, 30, "target scores : ");
+			mvprintw(1, 50, "%d", target);
+			mvaddstr(2, 30, "your scores : ");
+			mvprintw(2, 50, "%d", score);
 			mvaddstr(0, 30, "remaining steps : ");
 			mvprintw(0, 50, "%d", remainsteps);
 			if (remainsteps == 0 && score!=target)
@@ -1027,10 +1036,21 @@ public:
 				int gameover; gameover = getch(); go_on = false; break;
 				
 			}
+			if (score > target)
+			{
+				attrset(A_REVERSE);//set background
+				start_color();
+				init_pair(7, COLOR_CYAN, COLOR_BLUE);
+				attrset(COLOR_PAIR(7));
+				mvaddstr(8, 2, "You Win!!!!!");
+				int win; win = getch(); go_on = false; break;
+
+			}
 		//	attrset(A_UNDERLINE);
 			mvaddstr(0, 15, "Easy LEVEL");
-			mvaddstr(1, 50, "wanna quit game?press q");
-			mvaddstr(2, 50, "press s to select and press t to choose places");
+			mvaddstr(4, 30, "wanna quit game?press q");
+			mvaddstr(5, 30, "Manual:");
+			mvaddstr(6, 30, "press s to select and press t to choose places");
 			
 			cbreak(); // disable key buffering
 			noecho(); // disable echoing
@@ -1076,6 +1096,12 @@ public:
 			refresh();
 			setempty();
 			outputfruit();
+			if (fuckyet)
+			{
+				usleep(100000);
+			}
+			
+		
 			if (fuckyet)
 			{
 				usleep(100000);
