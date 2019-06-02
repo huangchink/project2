@@ -6,7 +6,7 @@
 using namespace std;
 class easy {
 public:
-	int fruit[6][10] = { 0 };
+	int candy[6][10] = { 0 };
 	int temp;
 	int height; int width;
 	int c, x = 0, y = 1;
@@ -24,16 +24,16 @@ public:
 				switch (temp)
 				{
 				case 1:
-					fruit[i][j] = 1;
+					candy[i][j] = 1;
 					break;
 				case 2:
-					fruit[i][j] = 10;	break;
+					candy[i][j] = 10;	break;
 				case 3:
-					fruit[i][j] = 100;	break;
+					candy[i][j] = 100;	break;
 				case 4:
-					fruit[i][j] = 1000;	break;
+					candy[i][j] = 1000;	break;
 				case 5:
-					fruit[i][j] = 10000;	break;
+					candy[i][j] = 10000;	break;
 
 				}
 			}
@@ -54,7 +54,7 @@ public:
 			init_pair(4, COLOR_BLUE, COLOR_BLACK);
 			init_pair(5, COLOR_YELLOW, COLOR_BLACK);
 			init_pair(6, COLOR_RED, COLOR_WHITE);
-			switch (fruit[i][j])
+			switch (candy[i][j])
 			{
 			case 1:
 				attrset(COLOR_PAIR(1));
@@ -104,7 +104,7 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10) //10個
 					{
 
 				
@@ -113,7 +113,7 @@ public:
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9) //九個
 					{
 
 						
@@ -122,7 +122,7 @@ public:
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8) //八個
 					{
 
 						
@@ -131,27 +131,27 @@ public:
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						 return true;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						return true;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5) //五個
 					{
 
 						return true;
@@ -160,14 +160,14 @@ public:
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4) //四個
 					{
 
 				 return true;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3)//三個
 				{
 
 					 return true;
@@ -185,7 +185,7 @@ public:
 
 			if (j + 3 <= 3)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //10個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100) //10個
 				{
 
 				
@@ -194,7 +194,7 @@ public:
 			}
 			if (j + 3 <= 4)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90) //九個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90) //九個
 				{
 
 					 return true;
@@ -202,7 +202,7 @@ public:
 			}
 			if (j + 3 <= 5)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80) //八個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80) //八個
 				{
 
 					 return true;
@@ -211,7 +211,7 @@ public:
 			}
 			if (j + 3 <= 6)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70) //七個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70) //七個
 				{
 
 					 return true;
@@ -219,7 +219,7 @@ public:
 			}
 			if (j + 3 <= 7)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60) //六個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60) //六個
 				{
 
 					 return true;
@@ -227,7 +227,7 @@ public:
 			}
 			if (j + 3 <= 8)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50) //五個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50) //五個
 				{
 
 					 return true;
@@ -235,13 +235,13 @@ public:
 			}
 			if (j + 3 <= 9)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40) //四個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40) //四個
 				{
 
 					 return true;
 				}
 			}
-			if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30)//三個
+			if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30)//三個
 			{
 
 				 return true;
@@ -259,7 +259,7 @@ public:
 
 			if (j + 3 <= 3)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 1000) //九個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 1000) //九個
 				{
 
 					 return true;
@@ -268,7 +268,7 @@ public:
 			}
 			if (j + 3 <= 4)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 900) //九個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 900) //九個
 				{
 
 					 return true;
@@ -277,7 +277,7 @@ public:
 			}
 			if (j + 3 <= 5)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 800) //八個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 800) //八個
 				{
 
 					 return true;
@@ -285,7 +285,7 @@ public:
 			}
 			if (j + 3 <= 6)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 700) //七個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 700) //七個
 				{
 
 					 return true;
@@ -293,7 +293,7 @@ public:
 			}
 			if (j + 3 <= 7)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 600) //六個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 600) //六個
 				{
 
 					 return true;
@@ -302,7 +302,7 @@ public:
 			}
 			if (j + 3 <= 8)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 500) //五個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 500) //五個
 				{
 
 					 return true;
@@ -310,14 +310,14 @@ public:
 			}
 			if (j + 3 <= 9)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 400) //四個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 400) //四個
 				{
 
 					 return true;
 
 				}
 			}
-			if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300)//三個
+			if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300)//三個
 			{
 
 				 return true;
@@ -334,7 +334,7 @@ public:
 
 			if (j + 3 <= 3)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10000) //九個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10000) //九個
 				{
 
 					 return true;
@@ -342,7 +342,7 @@ public:
 			}
 			if (j + 3 <= 4)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9000) //九個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9000) //九個
 				{
 
 				 return true;
@@ -350,7 +350,7 @@ public:
 			}
 			if (j + 3 <= 5)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8000) //八個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8000) //八個
 				{
 
 					 return true;
@@ -359,7 +359,7 @@ public:
 			}
 			if (j + 3 <= 6)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7000) //七個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7000) //七個
 				{
 
 				 return true;
@@ -367,7 +367,7 @@ public:
 			}
 			if (j + 3 <= 7)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6000) //六個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6000) //六個
 				{
 
 					 return true;
@@ -375,7 +375,7 @@ public:
 			}
 			if (j + 3 <= 8)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5000) //五個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5000) //五個
 				{
 
 					 return true;
@@ -383,14 +383,14 @@ public:
 			}
 			if (j + 3 <= 9)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4000) //四個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4000) //四個
 				{
 
 					 return true;
 
 				}
 			}
-			if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3000)//三個
+			if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3000)//三個
 			{
 
 				 return true;
@@ -408,7 +408,7 @@ public:
 
 			if (j + 3 <= 3)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100000) //九個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100000) //九個
 				{
 
 					 return true;
@@ -416,7 +416,7 @@ public:
 			}
 			if (j + 3 <= 4)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90000) //九個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90000) //九個
 				{
 
 					 return true;
@@ -425,7 +425,7 @@ public:
 			}
 			if (j + 3 <= 5)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80000) //八個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80000) //八個
 				{
 
 					 return true;
@@ -433,7 +433,7 @@ public:
 			}
 			if (j + 3 <= 6)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70000) //七個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70000) //七個
 				{
 
 					 return true;
@@ -441,7 +441,7 @@ public:
 			}
 			if (j + 3 <= 7)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60000) //六個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60000) //六個
 				{
 
 					 return true;
@@ -450,7 +450,7 @@ public:
 			}
 			if (j + 3 <= 8)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50000) //五個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50000) //五個
 				{
 
 					 return true;
@@ -458,14 +458,14 @@ public:
 			}
 			if (j + 3 <= 9)
 			{
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40000) //四個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40000) //四個
 				{
 
 					 return true;
 
 				}
 			}
-			if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30000)//三個
+			if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30000)//三個
 			{
 
 				 return true;
@@ -481,7 +481,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 6)
 			{
 
 				
@@ -497,7 +497,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 5)
 			{
 
 				
@@ -513,7 +513,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 4)
 			{
 
 			
@@ -529,7 +529,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3)
 			{
 
 			
@@ -547,7 +547,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 60)
 			{
 
 			
@@ -564,7 +564,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 50)
 			{
 
 			
@@ -581,7 +581,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 40)
 			{
 
 			
@@ -598,7 +598,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30)
 			{
 
 				
@@ -615,7 +615,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 600)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 600)
 			{
 
 			
@@ -631,7 +631,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 500)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 500)
 			{
 
 				
@@ -648,7 +648,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 400)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 400)
 			{
 
 				
@@ -664,7 +664,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300)
 			{
 
 			
@@ -682,7 +682,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6000)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 6000)
 			{
 
 				
@@ -699,7 +699,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5000)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 5000)
 			{
 
 				
@@ -716,7 +716,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4000)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 4000)
 			{
 
 				
@@ -732,7 +732,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3000)
 			{
 
 				
@@ -750,7 +750,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60000)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 60000)
 			{
 
 			
@@ -765,7 +765,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50000)
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 50000)
 			{
 
 			
@@ -782,7 +782,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40000) //四個
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 40000) //四個
 			{
 
 			
@@ -799,7 +799,7 @@ public:
 		for (int j = 0; j < 10; j++)
 		{
 
-			if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30000) //四個
+			if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30000) //四個
 			{
 
 				
@@ -832,79 +832,79 @@ public:
 				
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8]+fruit[i][j+9] == 10) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8]+candy[i][j+9] == 10) //10個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8]=fruit[i][j+9] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8]=candy[i][j+9] = -1;
+						candy[i][j] = 100000;
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7]+fruit[i][j+8] == 9) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7]+candy[i][j+8] == 9) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7]=fruit[i][j+8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7]=candy[i][j+8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6]+fruit[i][j+7] == 8) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6]+candy[i][j+7] == 8) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5]+fruit[i][j+6] == 7) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5]+candy[i][j+6] == 7) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5]=fruit[i][j+6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5]=candy[i][j+6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] +fruit[i][j+5]== 6) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] +candy[i][j+5]== 6) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] =fruit[i][j+5]= -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] =candy[i][j+5]= -1;
 					
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3]+fruit[i][j+4] == 5) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3]+candy[i][j+4] == 5) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j+4]=-1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j+4]=-1;
+						candy[i][j] = 100000;
 						score += 500;
 
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4) //四個
 					{
 						
-							fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+							candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 							score += 400;
 				
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2]  = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2]  = -1;
 					
 					score += 300;
 
@@ -921,78 +921,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100) //10個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 						score += 1000;
 
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 						score += 800;
 
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 
 						score += 400;
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 					
 					score += 300;
 
@@ -1009,78 +1009,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 1000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 1000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 						score += 1000;
 
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 900) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 900) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 						score += 900;
 
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 800) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 800) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 700) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 700) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 600) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 600) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 						score += 600;
 
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 500) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 500) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 400) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 400) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 
 					score += 300;
@@ -1097,78 +1097,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8000) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 						score += 800;
 
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7000) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6000) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5000) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4000) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3000)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -1185,78 +1185,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 						score += 900;
 
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80000) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70000) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60000) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 						score += 600;
 
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50000) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40000) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30000)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -1271,10 +1271,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j]+ fruit[i+5][j]== 6) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j]+ candy[i+5][j]== 6) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j]=fruit[i+5][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j]=candy[i+5][j] = -1;
 
 
 
@@ -1291,14 +1291,14 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] +fruit[i+4][j]== 5) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] +candy[i+4][j]== 5) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] =fruit[i+4][j]= -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] =candy[i+4][j]= -1;
 
 					score += 500;
 
-					fruit[i][j] = 100000;
+					candy[i][j] = 100000;
 
 
 				}
@@ -1311,10 +1311,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 4) 
 				{
 				
-						fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
+						candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = -1;
 							
 					
 
@@ -1331,10 +1331,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j]  = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j]  = -1;
 
 
 
@@ -1353,10 +1353,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 60) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = candy[i + 5][j] = -1;
 
 
 					score += 600;
@@ -1373,12 +1373,12 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 50) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = -1;
 
-					fruit[i][j] = 100000;
+					candy[i][j] = 100000;
 					score += 500;
 
 
@@ -1393,10 +1393,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 40) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = -1;
 
 
 					score += 400;
@@ -1413,10 +1413,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -1434,10 +1434,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 600) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 600) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = candy[i + 5][j] = -1;
 
 
 
@@ -1454,12 +1454,12 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 500) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 500) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = -1;
 
-					fruit[i][j] = 100000;
+					candy[i][j] = 100000;
 					score += 500;
 
 
@@ -1474,10 +1474,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 400) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 400) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = -1;
 
 
 
@@ -1494,10 +1494,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -1516,10 +1516,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6000) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 6000) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = candy[i + 5][j] = -1;
 
 
 					score += 600;
@@ -1536,12 +1536,12 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5000) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 5000) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = -1;
 
-					fruit[i][j] = 100000;
+					candy[i][j] = 100000;
 					score += 500;
 
 
@@ -1556,10 +1556,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4000) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 4000) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = -1;
 
 
 
@@ -1576,10 +1576,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3000) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 					score += 300;
@@ -1597,10 +1597,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60000) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] + candy[i + 5][j] == 60000) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = fruit[i + 5][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = candy[i + 5][j] = -1;
 
 
 
@@ -1617,11 +1617,11 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50000) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] + candy[i + 4][j] == 50000) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = fruit[i + 4][j] = -1;
-					fruit[i][j] = 100000;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = candy[i + 4][j] = -1;
+					candy[i][j] = 100000;
 
 					score += 500;
 
@@ -1637,10 +1637,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40000) //四個
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] + candy[i + 3][j] == 40000) //四個
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = fruit[i + 3][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = candy[i + 3][j] = -1;
 
 
 					score += 400;
@@ -1657,10 +1657,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30000) //四個
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30000) //四個
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 					score += 300;
@@ -1681,33 +1681,33 @@ public:
 			
 			for (int j = 0; j < 10; j++) {
 
-				if (fruit[i][j] == -1 && i - 1 >= 0)
+				if (candy[i][j] == -1 && i - 1 >= 0)
 				{
 					while (i > 0)//天降
 					{
-						fruit[i][j] = fruit[i - 1][j];
+						candy[i][j] = candy[i - 1][j];
 
 						i--;
 					}
-					fruit[0][j] = -1;
+					candy[0][j] = -1;
 
 				}
-				if (fruit[0][j] == -1) {
+				if (candy[0][j] == -1) {
 					int temp = (rand() % 5) + 1;
 					switch (temp)
 					{
 
 					case 1:
-						fruit[0][j] = 1;
+						candy[0][j] = 1;
 						break;
 					case 2:
-						fruit[0][j] = 10;	break;
+						candy[0][j] = 10;	break;
 					case 3:
-						fruit[0][j] = 100;	break;
+						candy[0][j] = 100;	break;
 					case 4:
-						fruit[0][j] = 1000;	break;
+						candy[0][j] = 1000;	break;
 					case 5:
-						fruit[0][j] = 10000;	break;
+						candy[0][j] = 10000;	break;
 
 					}
 
@@ -1775,7 +1775,7 @@ public:
 			{
 				for (int j = 0; j < 8; j++)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300000)
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000)
 					{
 
 
@@ -1798,7 +1798,7 @@ public:
 				for (int j = 0; j < 10; j++)
 				{
 
-					if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300000)
+					if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300000)
 					{
 
 
@@ -1857,7 +1857,7 @@ public:
 				nextX = x;
 				nextY = y;
 
-				swap(fruit[preY][preX], fruit[nextY][nextX]); //成功交換
+				swap(candy[preY][preX], candy[nextY][nextX]); //成功交換
 				if (swapable()) {
 
 					remainsteps--;
@@ -1866,7 +1866,7 @@ public:
 				else //不能交換
 
 				{
-					swap(fruit[preY][preX], fruit[nextY][nextX]);//換回來
+					swap(candy[preY][preX], candy[nextY][nextX]);//換回來
 					remainsteps--;
 					fuckyet = 1;
 					attrset(A_REVERSE);//set background
@@ -1946,7 +1946,7 @@ public:
 };
 class Normal {
 public:
-	int fruit[6][10] = { 0 };
+	int candy[6][10] = { 0 };
 	int temp;
 	int height; int width;
 	int c, x = 0, y = 1;
@@ -1964,16 +1964,16 @@ public:
 				switch (temp)
 				{
 				case 1:
-					fruit[i][j] = 1;
+					candy[i][j] = 1;
 					break;
 				case 2:
-					fruit[i][j] = 10;	break;
+					candy[i][j] = 10;	break;
 				case 3:
-					fruit[i][j] = 100;	break;
+					candy[i][j] = 100;	break;
 				case 4:
-					fruit[i][j] = 1000;	break;
+					candy[i][j] = 1000;	break;
 				case 5:
-					fruit[i][j] = 10000;	break;
+					candy[i][j] = 10000;	break;
 
 				}
 			}
@@ -1998,7 +1998,7 @@ public:
 					init_pair(4, COLOR_BLUE, COLOR_BLACK);
 					init_pair(5, COLOR_YELLOW, COLOR_BLACK);
 					init_pair(6, COLOR_RED, COLOR_WHITE);
-					switch (fruit[i][j])
+					switch (candy[i][j])
 					{
 					case 1:
 						attrset(COLOR_PAIR(1));
@@ -2035,7 +2035,7 @@ public:
 
 				}
 				if(i>=3)
-				switch (fruit[i][j])
+				switch (candy[i][j])
 				{
 				case 1:
 					attrset(COLOR_PAIR(1));
@@ -2083,11 +2083,13 @@ public:
 	bool swapable()
 	{
 
+
+
 		//------------------------------------------------------橫的-------------------------------------------//
 
 
-		//A
-		for (int i = 0; i < 6; i++)
+		//A 0~2
+		for (int i = 0; i < 3; i++)
 		{
 			for (int j = 0; j < 8; j++)
 			{
@@ -2096,54 +2098,46 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10) //10個
 					{
-
 
 						return true;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9) //九個
 					{
-
 
 						return true;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8) //八個
 					{
-
-
 						return true;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7) //七個
 					{
-
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
 
 						return true;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6) //六個
 					{
-
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
 
 						return true;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5) //五個
 					{
 
 						return true;
@@ -2152,14 +2146,87 @@ public:
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4) //四個
 					{
 
 						return true;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+		//A 3~5
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10) //10個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9) //九個
+					{
+						return true;
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8) //八個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6) //六個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5) //五個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3)//三個
 				{
 
 					return true;
@@ -2168,7 +2235,7 @@ public:
 			}
 		}
 		//B
-		for (int i = 0; i < 6; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			for (int j = 0; j < 8; j++)
 			{
@@ -2177,16 +2244,16 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100) //10個
 					{
 
-
 						return true;
+
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90) //九個
 					{
 
 						return true;
@@ -2194,7 +2261,80 @@ public:
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80) //八個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60) //六個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50) //五個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40) //四個
+					{
+
+						return true;
+					}
+				}
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+		//B 3~5
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100) //10個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90) //九個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80) //八個
 					{
 
 						return true;
@@ -2203,7 +2343,7 @@ public:
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70) //七個
 					{
 
 						return true;
@@ -2211,7 +2351,7 @@ public:
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60) //六個
 					{
 
 						return true;
@@ -2219,7 +2359,7 @@ public:
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50) //五個
 					{
 
 						return true;
@@ -2227,13 +2367,13 @@ public:
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40) //四個
 					{
 
 						return true;
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30)//三個
 				{
 
 					return true;
@@ -2242,7 +2382,7 @@ public:
 			}
 		}
 		//c
-		for (int i = 0; i < 6; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			for (int j = 0; j < 8; j++)
 			{
@@ -2251,7 +2391,7 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 1000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 1000) //九個
 					{
 
 						return true;
@@ -2260,7 +2400,7 @@ public:
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 900) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 900) //九個
 					{
 
 						return true;
@@ -2269,7 +2409,7 @@ public:
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 800) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 800) //八個
 					{
 
 						return true;
@@ -2277,7 +2417,7 @@ public:
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 700) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 700) //七個
 					{
 
 						return true;
@@ -2285,7 +2425,7 @@ public:
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 600) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 600) //六個
 					{
 
 						return true;
@@ -2294,7 +2434,7 @@ public:
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 500) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 500) //五個
 					{
 
 						return true;
@@ -2302,14 +2442,89 @@ public:
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 400) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 400) //四個
 					{
 
 						return true;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300)//三個
+				{
+
+					return true;
+				}
+			}
+		}
+
+		//c 3~5
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 1000) //九個
+					{
+						return true;
+
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 900) //九個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 800) //八個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 700) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 600) //六個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 500) //五個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 400) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300)//三個
 				{
 
 					return true;
@@ -2317,7 +2532,7 @@ public:
 			}
 		}
 		//D
-		for (int i = 0; i < 6; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			for (int j = 0; j < 8; j++)
 			{
@@ -2326,7 +2541,7 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10000) //九個
 					{
 
 						return true;
@@ -2334,7 +2549,7 @@ public:
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9000) //九個
 					{
 
 						return true;
@@ -2342,7 +2557,7 @@ public:
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8000) //八個
 					{
 
 						return true;
@@ -2351,7 +2566,7 @@ public:
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7000) //七個
 					{
 
 						return true;
@@ -2359,7 +2574,7 @@ public:
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6000) //六個
 					{
 
 						return true;
@@ -2367,7 +2582,82 @@ public:
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5000) //五個
+					{
+
+						
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4000) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3000)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+		//D 3~5
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10000) //九個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9000) //九個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8000) //八個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7000) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6000) //六個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5000) //五個
 					{
 
 						return true;
@@ -2375,14 +2665,14 @@ public:
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4000) //四個
 					{
 
 						return true;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3000)//三個
 				{
 
 					return true;
@@ -2391,7 +2681,7 @@ public:
 			}
 		}
 		//E
-		for (int i = 0; i < 6; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			for (int j = 0; j < 8; j++)
 			{
@@ -2400,7 +2690,7 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100000) //九個
 					{
 
 						return true;
@@ -2408,7 +2698,7 @@ public:
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90000) //九個
 					{
 
 						return true;
@@ -2417,7 +2707,7 @@ public:
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80000) //八個
 					{
 
 						return true;
@@ -2425,7 +2715,7 @@ public:
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70000) //七個
 					{
 
 						return true;
@@ -2433,7 +2723,7 @@ public:
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60000) //六個
 					{
 
 						return true;
@@ -2442,7 +2732,7 @@ public:
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50000) //五個
 					{
 
 						return true;
@@ -2450,14 +2740,90 @@ public:
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40000) //四個
 					{
 
 						return true;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30000)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+
+
+		//E 3~5
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100000) //九個
+					{
+						return true;
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90000) //九個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80000) //八個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70000) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60000) //六個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50000) //五個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40000) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30000)//三個
 				{
 
 					return true;
@@ -2467,165 +2833,86 @@ public:
 		}
 		//------------------------------------------直的--------------------------------------------------
 		//A
-		//直的 六個 
+
+
+
+		//直的 三個
 		for (int i = 0; i < 1; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3)
 				{
 
-
-
 					return true;
+				
+
+
 				}
 
 			}
 		}
-		//直的 五個
-		for (int i = 0; i < 2; i++)
+		for (int i = 3; i < 4; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3)
 				{
 
-
 					return true;
+
 
 				}
 
 			}
 		}
-		//直的 四個
-		for (int i = 0; i < 3; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4)
-				{
-
-
-					return true;
-
-				}
-
-			}
-		}
-		//直的 三個
-		for (int i = 0; i < 4; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3)
-				{
-
-
-					return true;
-
-				}
-
-			}
-		}
-
 		//B
-		//直的 六個 
+
+		//直的 三個
 		for (int i = 0; i < 1; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30)
 				{
-
-
 
 					return true;
 
-				}
-
-			}
-		}
-		//直的 五個
-		for (int i = 0; i < 2; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50)
-				{
-
-
-					return true;
-
-
-				}
-
-			}
-		}
-		//直的 四個
-		for (int i = 0; i < 3; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40)
-				{
-
-
-
-					return true;
 
 				}
 
 			}
 		}
 		//直的 三個
-		for (int i = 0; i < 4; i++)
+		for (int i = 3; i < 4; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30)
 				{
 
-
 					return true;
+
 
 				}
 
 			}
 		}
 		//C
-		//直的 六個 
+
+
+		//直的 三個
 		for (int i = 0; i < 1; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 600)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300)
 				{
-
-
-					return true;
-
-				}
-
-			}
-		}
-		//直的 五個
-		for (int i = 0; i < 2; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 500)
-				{
-
 
 					return true;
 
@@ -2634,101 +2921,57 @@ public:
 
 			}
 		}
-		//直的 四個
-		for (int i = 0; i < 3; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 400)
-				{
+		//C
 
 
-
-					return true;
-				}
-
-			}
-		}
 		//直的 三個
-		for (int i = 0; i < 4; i++)
+		for (int i = 3; i < 4; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300)
 				{
 
-
 					return true;
+
 
 				}
 
 			}
 		}
-
 		//D
-		//直的 六個 
+
+		//直的 三個
 		for (int i = 0; i < 1; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6000)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3000)
 				{
 
-
 					return true;
+
 
 
 				}
 
 			}
 		}
-		//直的 五個
-		for (int i = 0; i < 2; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
+		//D
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5000)
-				{
-
-
-
-					return true;
-
-				}
-
-			}
-		}
-		//直的 四個
-		for (int i = 0; i < 3; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4000)
-				{
-
-
-
-					return true;
-				}
-
-			}
-		}
 		//直的 三個
-		for (int i = 0; i < 4; i++)
+		for (int i = 3; i < 4; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3000)
 				{
 
-
 					return true;
+
 
 
 				}
@@ -2736,47 +2979,31 @@ public:
 			}
 		}
 		//E
-		//直的 六個 
+
+		//直的 三個
 		for (int i = 0; i < 1; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60000)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30000)
 				{
 
-
 					return true;
+
+
+
 				}
 
 			}
 		}
-		//直的 五個
-		for (int i = 0; i < 2; i++)
+		for (int i = 3; i < 4; i++)
 		{
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50000)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30000)
 				{
-
-
-
-					return true;
-
-				}
-
-			}
-		}
-		//直的 四個
-		for (int i = 0; i < 3; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40000) //四個
-				{
-
 
 					return true;
 
@@ -2785,26 +3012,8 @@ public:
 
 			}
 		}
-		//直的 三個
-		for (int i = 0; i < 4; i++)
-		{
-			for (int j = 0; j < 10; j++)
-			{
-
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30000) //四個
-				{
-
-
-
-					return true;
-
-				}
-
-			}
-		}
-
-
 		return false;
+
 	}
 	//一顆100分
 	void setempty()//判斷可消後，消掉並設為-1
@@ -2825,79 +3034,79 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10) //10個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
+						candy[i][j] = 100000;
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -2914,79 +3123,79 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10) //10個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
+						candy[i][j] = 100000;
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -3003,78 +3212,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100) //10個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 						score += 1000;
 
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 						score += 800;
 
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 
 						score += 400;
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -3091,78 +3300,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //10個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100) //10個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 						score += 1000;
 
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 						score += 800;
 
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 
 						score += 400;
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -3179,78 +3388,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 1000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 1000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 						score += 1000;
 
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 900) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 900) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 						score += 900;
 
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 800) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 800) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 700) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 700) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 600) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 600) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 						score += 600;
 
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 500) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 500) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 400) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 400) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 
 					score += 300;
@@ -3268,78 +3477,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 1000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 1000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 						score += 1000;
 
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 900) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 900) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 						score += 900;
 
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 800) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 800) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 700) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 700) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 600) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 600) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 						score += 600;
 
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 500) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 500) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 400) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 400) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 
 					score += 300;
@@ -3356,78 +3565,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8000) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 						score += 800;
 
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7000) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6000) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5000) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4000) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3000)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -3444,78 +3653,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 10000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 9000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 
 						score += 900;
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 8000) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 						score += 800;
 
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 7000) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 6000) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 
 						score += 600;
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 5000) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 4000) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 3000)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -3532,78 +3741,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 						score += 900;
 
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80000) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70000) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60000) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 						score += 600;
 
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50000) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40000) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30000)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -3622,78 +3831,78 @@ public:
 
 				if (j + 3 <= 3)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] + candy[i][j + 9] == 100000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = fruit[i][j + 9] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = candy[i][j + 9] = -1;
 
 						score += 1000;
 					}
 				}
 				if (j + 3 <= 4)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90000) //九個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] + candy[i][j + 8] == 90000) //九個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = fruit[i][j + 8] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = candy[i][j + 8] = -1;
 						score += 900;
 
 					}
 				}
 				if (j + 3 <= 5)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80000) //八個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] + candy[i][j + 7] == 80000) //八個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = fruit[i][j + 7] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = candy[i][j + 7] = -1;
 
 						score += 800;
 					}
 				}
 				if (j + 3 <= 6)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70000) //七個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] + candy[i][j + 6] == 70000) //七個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = candy[i][j + 6] = -1;
 
 						score += 700;
 					}
 				}
 				if (j + 3 <= 7)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60000) //六個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] + candy[i][j + 5] == 60000) //六個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = candy[i][j + 5] = -1;
 						score += 600;
 
 					}
 				}
 				if (j + 3 <= 8)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50000) //五個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] + candy[i][j + 4] == 50000) //五個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = -1;
-						fruit[i][j] = 100000;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = candy[i][j + 4] = -1;
+						candy[i][j] = 100000;
 						score += 500;
 					}
 				}
 				if (j + 3 <= 9)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40000) //四個
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i][j + 3] == 40000) //四個
 					{
 
-						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = -1;
+						candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i][j + 3] = -1;
 						score += 400;
 
 					}
 				}
-				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30000)//三個
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 30000)//三個
 				{
 
-					fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = -1;
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = -1;
 
 					score += 300;
 
@@ -3711,10 +3920,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -3730,10 +3939,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -3752,10 +3961,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -3772,10 +3981,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -3795,10 +4004,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -3818,10 +4027,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 
@@ -3840,10 +4049,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3000)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 					score += 300;
@@ -3862,10 +4071,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 3000)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 					score += 300;
@@ -3884,10 +4093,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30000) 
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30000) 
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 					score += 300;
@@ -3903,10 +4112,10 @@ public:
 			for (int j = 0; j < 10; j++)
 			{
 
-				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30000)
+				if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 30000)
 				{
 
-					fruit[i][j] = fruit[i + 1][j] = fruit[i + 2][j] = -1;
+					candy[i][j] = candy[i + 1][j] = candy[i + 2][j] = -1;
 
 
 					score += 300;
@@ -3927,33 +4136,33 @@ public:
 
 			for (int j = 0; j < 10; j++) {
 
-				if (fruit[i][j] == -1 && i - 1 >= 0)
+				if (candy[i][j] == -1 && i - 1 >= 0)
 				{
 					while (i > 0)//天降
 					{
-						fruit[i][j] = fruit[i - 1][j];
+						candy[i][j] = candy[i - 1][j];
 
 						i--;
 					}
-					fruit[0][j] = -1;
+					candy[0][j] = -1;
 
 				}
-				if (fruit[0][j] == -1) {
+				if (candy[0][j] == -1) {
 					int temp = (rand() % 5) + 1;
 					switch (temp)
 					{
 
 					case 1:
-						fruit[0][j] = 1;
+						candy[0][j] = 1;
 						break;
 					case 2:
-						fruit[0][j] = 10;	break;
+						candy[0][j] = 10;	break;
 					case 3:
-						fruit[0][j] = 100;	break;
+						candy[0][j] = 100;	break;
 					case 4:
-						fruit[0][j] = 1000;	break;
+						candy[0][j] = 1000;	break;
 					case 5:
-						fruit[0][j] = 10000;	break;
+						candy[0][j] = 10000;	break;
 
 					}
 
@@ -4020,7 +4229,7 @@ public:
 			{
 				for (int j = 0; j < 8; j++)
 				{
-					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300000)
+					if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000)
 					{
 
 
@@ -4043,7 +4252,7 @@ public:
 				for (int j = 0; j < 10; j++)
 				{
 
-					if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300000)
+					if (candy[i][j] + candy[i + 1][j] + candy[i + 2][j] == 300000)
 					{
 
 
@@ -4105,17 +4314,18 @@ public:
 				}
 				break;
 			case 't':
+			{
 				if (y > 3)
 				{
 					nextX = x;
-					nextY = y-1;
+					nextY = y - 1;
 				}
 				else
 				{
 					nextX = x;
 					nextY = y;
 				}
-				swap(fruit[preY][preX], fruit[nextY][nextX]);
+				swap(candy[preY][preX], candy[nextY][nextX]);
 				if (swapable()) {
 
 					remainsteps--;
@@ -4124,7 +4334,7 @@ public:
 				else //不能交換
 
 				{
-					swap(fruit[preY][preX], fruit[nextY][nextX]);//換回來
+					swap(candy[preY][preX], candy[nextY][nextX]);//換回來
 					remainsteps--;
 					fuckyet = 1;
 					attrset(A_REVERSE);//set background
@@ -4132,9 +4342,10 @@ public:
 					mvaddstr(12, 1, "invalid move! "); int fuck; fuck = getch();
 				}
 
-				
-				
+
+
 				break;
+			}
 			case KEY_LEFT: --x; mvaddstr(10, 54, "Left "); break;
 			case KEY_RIGHT: ++x; mvaddstr(10, 54, "Right"); break;
 			case KEY_UP: --y; mvaddstr(10, 54, "Uppp "); break;
