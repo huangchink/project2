@@ -2080,6 +2080,732 @@ public:
 			}*/
 		}
 	}
+	bool swapable()
+	{
+
+		//------------------------------------------------------橫的-------------------------------------------//
+
+
+		//A
+		for (int i = 0; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10) //10個
+					{
+
+
+						return true;
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9) //九個
+					{
+
+
+						return true;
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8) //八個
+					{
+
+
+						return true;
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7) //七個
+					{
+
+						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = fruit[i][j + 6] = -1;
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6) //六個
+					{
+
+						fruit[i][j] = fruit[i][j + 1] = fruit[i][j + 2] = fruit[i][j + 3] = fruit[i][j + 4] = fruit[i][j + 5] = -1;
+
+						return true;
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5) //五個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+		//B
+		for (int i = 0; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100) //10個
+					{
+
+
+						return true;
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90) //九個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80) //八個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60) //六個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50) //五個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40) //四個
+					{
+
+						return true;
+					}
+				}
+				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+		//c
+		for (int i = 0; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 1000) //九個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 900) //九個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 800) //八個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 700) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 600) //六個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 500) //五個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 400) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 300)//三個
+				{
+
+					return true;
+				}
+			}
+		}
+		//D
+		for (int i = 0; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 10000) //九個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 9000) //九個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 8000) //八個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 7000) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 6000) //六個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 5000) //五個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 4000) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 3000)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+		//E
+		for (int i = 0; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+
+
+
+				if (j + 3 <= 3)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] + fruit[i][j + 9] == 100000) //九個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 4)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] + fruit[i][j + 8] == 90000) //九個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 5)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] + fruit[i][j + 7] == 80000) //八個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 6)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] + fruit[i][j + 6] == 70000) //七個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 7)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] + fruit[i][j + 5] == 60000) //六個
+					{
+
+						return true;
+
+					}
+				}
+				if (j + 3 <= 8)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] + fruit[i][j + 4] == 50000) //五個
+					{
+
+						return true;
+					}
+				}
+				if (j + 3 <= 9)
+				{
+					if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] + fruit[i][j + 3] == 40000) //四個
+					{
+
+						return true;
+
+					}
+				}
+				if (fruit[i][j] + fruit[i][j + 1] + fruit[i][j + 2] == 30000)//三個
+				{
+
+					return true;
+
+				}
+			}
+		}
+		//------------------------------------------直的--------------------------------------------------
+		//A
+		//直的 六個 
+		for (int i = 0; i < 1; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6)
+				{
+
+
+
+					return true;
+				}
+
+			}
+		}
+		//直的 五個
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5)
+				{
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//直的 四個
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4)
+				{
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//直的 三個
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3)
+				{
+
+
+					return true;
+
+				}
+
+			}
+		}
+
+		//B
+		//直的 六個 
+		for (int i = 0; i < 1; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60)
+				{
+
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//直的 五個
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50)
+				{
+
+
+					return true;
+
+
+				}
+
+			}
+		}
+		//直的 四個
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40)
+				{
+
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//直的 三個
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30)
+				{
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//C
+		//直的 六個 
+		for (int i = 0; i < 1; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 600)
+				{
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//直的 五個
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 500)
+				{
+
+
+					return true;
+
+
+				}
+
+			}
+		}
+		//直的 四個
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 400)
+				{
+
+
+
+					return true;
+				}
+
+			}
+		}
+		//直的 三個
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 300)
+				{
+
+
+					return true;
+
+				}
+
+			}
+		}
+
+		//D
+		//直的 六個 
+		for (int i = 0; i < 1; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 6000)
+				{
+
+
+					return true;
+
+
+				}
+
+			}
+		}
+		//直的 五個
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 5000)
+				{
+
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//直的 四個
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 4000)
+				{
+
+
+
+					return true;
+				}
+
+			}
+		}
+		//直的 三個
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 3000)
+				{
+
+
+					return true;
+
+
+				}
+
+			}
+		}
+		//E
+		//直的 六個 
+		for (int i = 0; i < 1; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] + fruit[i + 5][j] == 60000)
+				{
+
+
+					return true;
+				}
+
+			}
+		}
+		//直的 五個
+		for (int i = 0; i < 2; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] + fruit[i + 4][j] == 50000)
+				{
+
+
+
+					return true;
+
+				}
+
+			}
+		}
+		//直的 四個
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] + fruit[i + 3][j] == 40000) //四個
+				{
+
+
+					return true;
+
+
+				}
+
+			}
+		}
+		//直的 三個
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+
+				if (fruit[i][j] + fruit[i + 1][j] + fruit[i + 2][j] == 30000) //四個
+				{
+
+
+
+					return true;
+
+				}
+
+			}
+		}
+
+
+		return false;
+	}
 	//一顆100分
 	void setempty()//判斷可消後，消掉並設為-1
 	{
@@ -3390,8 +4116,24 @@ public:
 					nextY = y;
 				}
 				swap(fruit[preY][preX], fruit[nextY][nextX]);
-				remainsteps--;
-				fuckyet = 1;
+				if (swapable()) {
+
+					remainsteps--;
+					fuckyet = 1;
+				}
+				else //不能交換
+
+				{
+					swap(fruit[preY][preX], fruit[nextY][nextX]);//換回來
+					remainsteps--;
+					fuckyet = 1;
+					attrset(A_REVERSE);//set background
+					attrset(COLOR_PAIR(6));
+					mvaddstr(12, 1, "invalid move! "); int fuck; fuck = getch();
+				}
+
+				
+				
 				break;
 			case KEY_LEFT: --x; mvaddstr(10, 54, "Left "); break;
 			case KEY_RIGHT: ++x; mvaddstr(10, 54, "Right"); break;
