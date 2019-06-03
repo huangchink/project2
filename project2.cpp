@@ -2315,7 +2315,7 @@ public:
 			c = getch();
 			switch (c) {
 				//quit
-			case 'q':mvaddstr(27, 1, "you already quit the game,press any key to leave"); int input; input = getch(); go_on = false; break;
+			case 'q':  go_on = false; break;//退出遊戲
 			case 's'://select
 
 				preX = x;
@@ -5385,7 +5385,7 @@ public:
 			c = getch();
 			switch (c) {
 				//quit
-			case 'q':mvaddstr(27, 1, "you already quit the game,press any key to leave"); int input; input = getch(); go_on = false; break;
+			case 'q':mvaddstr(27, 1, "you already quit the game,press any key to leave");  go_on = false; break;
 			case 's'://select
 				attrset(A_REVERSE);//set background
 				if (y > 3)
@@ -5510,6 +5510,7 @@ int main()
 	clear();
 	refresh();
 	attrset(A_BOLD);
+	restart:
 	mvaddstr(0, 0, "welcome to Candy Crush");
 	mvaddstr(1, 0, "please choose 1. easy or 2.normal 3.crazy" );//讓玩家選擇難度
 	int c;
@@ -5518,29 +5519,36 @@ int main()
 	refresh();
 	easy Easy;
 	Normal normal;
-	switch (c)// 選擇難度
-	{
-	case '1':
 	
 
-		int startgame1;//開始遊戲
-		mvaddstr(2, 10, "Press any key to start");
-		startgame1 = getch();
-		clear();
-		refresh();
-		Easy.setfruit();
-		Easy.lets_play_a_game();//開玩
-		break;
-	case '2':
-		int startgame2;//開始遊戲
-		mvaddstr(2, 10, "Press any key to start");
-		startgame2 = getch();
-		clear();
-		refresh();
-		normal.setfruit();
-		normal.lets_play_a_game();//開玩
+		switch (c)// 選擇難度
+		{
+		case '1':
 
-	}
+
+			int startgame1;//開始遊戲
+			mvaddstr(2, 10, "Press any key to start");
+			startgame1 = getch();
+			clear();
+			refresh();
+			Easy.setfruit();
+			Easy.lets_play_a_game();//開玩
+			break;
+		case '2':
+			int startgame2;//開始遊戲
+			mvaddstr(2, 10, "Press any key to start");
+			startgame2 = getch();
+			clear();
+			refresh();
+			normal.setfruit();
+			normal.lets_play_a_game();//開玩
+
+		}
+		clear();
+		refresh();
+		mvaddstr(0, 0, "welcome to Candy Crush");
+		mvaddstr(1, 0, "please choose 1. easy or 2.normal 3.crazy");//讓玩家選擇難度
+		goto restart;
 	endwin();
 	cout << "End Game";
 
