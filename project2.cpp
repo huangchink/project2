@@ -90,9 +90,18 @@ public:
 	//一顆100分
 	bool swapable()
 	{
-
+		for (int i = 0; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if ((candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000) || (candy[i][j]+candy[i][j+1]+candy[i][j+2]==300000))
+				{
+					return true;
+				}
+			}
+		}
 		//------------------------------------------------------橫的-------------------------------------------//
-
+		
 
 		//A
 		for (int i = 0; i < 6; i++)
@@ -815,10 +824,470 @@ public:
 	return false;
 }
 	void setempty()//判斷可消後，消掉並設為-1
-	{
+	{   //  x
+		//  x
+		//xxo
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 2] + candy[i - 2][j + 2] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 2] = candy[i - 2][j + 2] = -1; score += 500;
+					candy[i][j] = 100000;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 2] + candy[i - 2][j + 2] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 2] = candy[i - 2][j + 2] = -1; score += 500; candy[i][j] = 100000;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 2] + candy[i - 2][j + 2] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 2] = candy[i - 2][j + 2] = -1; score += 500; candy[i][j] = 100000;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 2] + candy[i - 2][j + 2] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 2] = candy[i - 2][j + 2] = -1; score += 500; candy[i][j] = 100000;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 2] + candy[i - 2][j + 2] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 2] = candy[i - 2][j + 2] = -1; score += 500; candy[i][j] = 100000;
+				}
+			}
+		}
+		//x
+		//x
+		//o x x
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j] + candy[i - 2][j] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j] = candy[i - 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j] + candy[i - 2][j] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j] = candy[i - 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j] + candy[i - 2][j] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j] = candy[i - 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j] + candy[i - 2][j] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j] = candy[i - 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j] + candy[i - 2][j] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j] = candy[i - 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		//x x o
+		//    x
+		//    x
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i+1][j+2] + candy[i +2][j+2] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i +1][j+2] = candy[i + 2][j+2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i + 2][j + 2] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j+2] = candy[i + 2][j+2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i + 2][j + 2] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j+2] = candy[i + 2][j+2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i + 2][j + 2] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j+2] = candy[i - 2][j+2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i + 2][j + 2] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j+2] = candy[i + 2][j+2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		//o x x
+		//x
+		//x
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i + 2][j] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i +2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i + 2][j] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i + 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i + 2][j] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i + 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i + 2][j] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i + 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i + 2][j] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i + 2][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		//     x
+		// x x o
+		//     x
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j+2] + candy[i -1][j+2] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j+2] = candy[i -1][j+2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
 
-	
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i - 1][j + 2] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 2] = candy[i - 1][j + 2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i - 1][j + 2] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 2] = candy[i - 1][j + 2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i - 1][j + 2] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 2] = candy[i - 1][j + 2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 2] + candy[i - 1][j + 2] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 2] = candy[i - 1][j + 2] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
 
+		//   x
+		//   o x x
+		//   x
+		//
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i - 1][j] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i - 1][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i - 1][j] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i - 1][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i - 1][j] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i - 1][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i - 1][j] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i - 1][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j] + candy[i - 1][j] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j] = candy[i - 1][j] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		//x o x
+		//  x
+		//  x
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j+1] + candy[i+2][j+1] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j+1] = candy[i +2][j+1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 1] + candy[i + 2][j + 1] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 1] = candy[i + 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 1] + candy[i + 2][j + 1] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 1] = candy[i + 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 1] + candy[i + 2][j + 1] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 1] = candy[i + 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 0; i < 4; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i + 1][j + 1] + candy[i + 2][j + 1] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i + 1][j + 1] = candy[i + 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+
+		//  x
+		//  x
+		//x o x
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 1] + candy[i - 2][j + 1] == 5)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 1] = candy[i - 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 1] + candy[i - 2][j + 1] == 50)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 1] = candy[i - 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 1] + candy[i - 2][j + 1] == 500)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 1] = candy[i - 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 1] + candy[i - 2][j + 1] == 5000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 1] = candy[i - 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
+		for (int i = 2; i < 6; i++)
+		{
+			for (int j = 0; j < 8; j++)
+			{
+				if (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] + candy[i - 1][j + 1] + candy[i - 2][j + 1] == 50000)
+				{
+					candy[i][j] = candy[i][j + 1] = candy[i][j + 2] = candy[i - 1][j + 1] = candy[i - 2][j + 1] = -1; candy[i][j] = 100000;
+					score += 500;
+				}
+			}
+		}
 		//------------------------------------------------------橫的-------------------------------------------//
 		
 
@@ -1767,7 +2236,7 @@ public:
 				start_color();
 				init_pair(6, COLOR_CYAN, COLOR_RED);
 				attrset(COLOR_PAIR(6));
-				mvaddstr(2, 15, "Gameover");
+				mvaddstr(2, 15, "Out of moves");
 				int gameover; gameover = getch(); go_on = false; break;
 				
 			}
@@ -1867,7 +2336,7 @@ public:
 
 				{
 					swap(candy[preY][preX], candy[nextY][nextX]);//換回來
-					remainsteps--;
+				
 					fuckyet = 1;
 					attrset(A_REVERSE);//set background
 					attrset(COLOR_PAIR(6));
@@ -1895,9 +2364,12 @@ public:
 			refresh();
 			setempty();
 			outputfruit();
+			
+
 			if (fuckyet)
 			{
 				usleep(100000);
+				int shit = getch();
 			}
 			skyfall();
 			setempty();
@@ -4221,7 +4693,7 @@ public:
 				start_color();
 				init_pair(6, COLOR_CYAN, COLOR_RED);
 				attrset(COLOR_PAIR(6));
-				mvaddstr(8, 2, "Gameover");
+				mvaddstr(8, 2, "Out of move");
 				int gameover; gameover = getch(); go_on = false; break;
 
 			}
