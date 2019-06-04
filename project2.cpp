@@ -43,48 +43,69 @@ public:
 
 	void outputfruit()
 	{
+		
+			for (int j = 0; j < 12; j++)
+			{
+				
+					mvaddstr(0 , j + 11, "=");
+				
+				
+
+			}
+		
+		for (int j = 0; j < 12; j++)
+		{
+			
+				mvaddstr(7, j + 11, "=");
+			
+
+
+		}
 	for (int i = 0; i < 6; i++)
 	{
+		mvaddstr(i + 1, 11, "|"); 
 		for (int j = 0; j < 10; j++)
 		{
 			start_color();
 			init_pair(1, COLOR_CYAN, COLOR_BLACK);
 			init_pair(2, COLOR_RED, COLOR_BLACK);
 			init_pair(3, COLOR_GREEN, COLOR_BLACK);
-			init_pair(4, COLOR_BLUE, COLOR_BLACK);
+			init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
 			init_pair(5, COLOR_YELLOW, COLOR_BLACK);
 			init_pair(6, COLOR_RED, COLOR_WHITE);
+
 			switch (candy[i][j])
 			{
 			case 1:
 				attrset(COLOR_PAIR(1));
-				mvaddstr(i,j,"A"); break;
+				mvaddstr(i+1,j + 12,"B"); break;
 				
 				
 			case 10:
 				attrset(COLOR_PAIR(2));
-				mvaddstr(i, j, "B");	break;
+				mvaddstr(i + 1, j + 12, "I");	break;
 				
 			case 100:
 				attrset(COLOR_PAIR(3));
-				mvaddstr(i, j, "C"); break;
+				mvaddstr(i + 1, j + 12, "T"); break;
 				
 			case 1000:
 				attrset(COLOR_PAIR(4));
-				mvaddstr(i, j, "D");	break;
+				mvaddstr(i + 1, j + 12, "C");	break;
 			
 			case 10000:
 				attrset(COLOR_PAIR(5));
-				mvaddstr(i, j, "E"); break;
+				mvaddstr(i + 1, j + 12, "H"); break;
 			case 100000:
 				attrset(COLOR_PAIR(6));
-				mvaddstr(i, j, "O"); break;
+				mvaddstr(i + 1, j + 12, "O"); break;
 			case -1:
-				mvaddstr(i, j,  " "); break;
+				mvaddstr(i + 1, j + 12,  " "); break;
 			
 			}
 		}
-		mvprintw(i, 10, "\n");
+	
+		mvaddstr(i + 1,  22, "|"); 
 	}
 	}
 	//一顆100分
@@ -2299,7 +2320,7 @@ public:
 
 			}
 		//	attrset(A_UNDERLINE);
-			mvaddstr(0, 15, "Easy LEVEL");
+			mvaddstr(0, 0, "Easy LEVEL");
 			mvaddstr(4, 30, "wanna quit game?press q");
 			mvaddstr(5, 30, "Manual:");
 			mvaddstr(6, 30, "press s to select and press t to choose places");
@@ -2318,13 +2339,13 @@ public:
 			case 'q':  go_on = false; break;//退出遊戲
 			case 's'://select
 
-				preX = x;
-				preY = y;
+				preX = x-12;
+				preY = y-1;
 				break;
 			case 't':
 			{
-				nextX = x;
-				nextY = y;
+				nextX = x-12;
+				nextY = y-1;
 
 				swap(candy[preY][preX], candy[nextY][nextX]); //成功交換
 				if (swapable()) {
