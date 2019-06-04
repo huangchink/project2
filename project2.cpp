@@ -2214,11 +2214,6 @@ public:
 	}
 
 
-
-
-
-
-
 	bool fuckyet=0;
 	int go_on = 1;
 	int preX;
@@ -5533,7 +5528,7 @@ int main()
 	attrset(A_BOLD);
 	restart:
 	mvaddstr(0, 0, "welcome to Candy Crush");
-	mvaddstr(1, 0, "please choose 1. easy or 2.normal 3.crazy" );//讓玩家選擇難度
+	mvaddstr(3, 0, "You can choose 1. easy  2.normal 3.crazy or q to leave" );//讓玩家選擇難度
 	int c;
 	c = getch();
 	clear();
@@ -5563,13 +5558,17 @@ int main()
 			refresh();
 			normal.setfruit();
 			normal.lets_play_a_game();//開玩
-
+			break;
+		case 'q':
+			goto endgame;
+		
 		}
 		clear();
 		refresh();
-		mvaddstr(0, 0, "welcome to Candy Crush");
-		mvaddstr(1, 0, "please choose 1. easy or 2.normal 3.crazy");//讓玩家選擇難度
+		mvaddstr(0, 0, "Welcome to Candy Crush");
+		mvaddstr(3, 0, "You can choose 1. easy  2.normal 3.crazy or q to leave");//讓玩家選擇難度
 		goto restart;
+		endgame:
 	endwin();
 	cout << "End Game";
 
