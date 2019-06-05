@@ -43,7 +43,16 @@ public:
 
 	void outputfruit()
 	{
-		
+		start_color();
+		init_pair(1, COLOR_CYAN, COLOR_BLACK);
+		init_pair(2, COLOR_RED, COLOR_BLACK);
+		init_pair(3, COLOR_GREEN, COLOR_BLACK);
+		init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
+		init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+		init_pair(6, COLOR_RED, COLOR_WHITE);
+		init_pair(7, COLOR_BLACK, COLOR_YELLOW);
+		init_pair(8, COLOR_BLACK, COLOR_BLUE);
+		attrset(COLOR_PAIR(7));
 			for (int j = 0; j < 12; j++)
 			{
 				
@@ -63,17 +72,11 @@ public:
 		}
 	for (int i = 0; i < 6; i++)
 	{
+		attrset(COLOR_PAIR(7));
 		mvaddstr(i + 1, 11, "|"); 
 		for (int j = 0; j < 10; j++)
 		{
-			start_color();
-			init_pair(1, COLOR_CYAN, COLOR_BLACK);
-			init_pair(2, COLOR_RED, COLOR_BLACK);
-			init_pair(3, COLOR_GREEN, COLOR_BLACK);
-			init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
-			init_pair(5, COLOR_YELLOW, COLOR_BLACK);
-			init_pair(6, COLOR_RED, COLOR_WHITE);
-
+		
 			switch (candy[i][j])
 			{
 			case 1:
@@ -104,7 +107,7 @@ public:
 			
 			}
 		}
-	
+		attrset(COLOR_PAIR(7));
 		mvaddstr(i + 1,  22, "|"); 
 	}
 	}
@@ -2222,6 +2225,15 @@ public:
 	int nextY ;
 	void lets_play_a_game()//play   
 	{
+		start_color();
+		init_pair(1, COLOR_CYAN, COLOR_BLACK);
+		init_pair(2, COLOR_RED, COLOR_BLACK);
+		init_pair(3, COLOR_GREEN, COLOR_BLACK);
+		init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
+		init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+		init_pair(6, COLOR_RED, COLOR_WHITE);
+		init_pair(7, COLOR_BLACK, COLOR_YELLOW);
+		init_pair(8, COLOR_BLACK, COLOR_BLUE);
 		clear();
 		refresh();
 		setempty();
@@ -2238,7 +2250,7 @@ public:
 		score = 0;
 		while (go_on)
 		{
-		
+			attrset(COLOR_PAIR(5));
 			mvaddstr(1, 30, "target scores : ");
 			mvprintw(1, 50, "%d", target);
 			mvaddstr(2, 30, "your scores : ");
@@ -2440,7 +2452,7 @@ public:
 	int c, x = 0, y = 1;
 	int score = 0;
 	int target = 10000;
-	int remainsteps = 10;
+	int remainsteps = 20;
 
 	void setfruit()
 	{
@@ -2471,85 +2483,101 @@ public:
 
 	void outputfruit()
 	{
+		for (int j = 0; j < 12; j++)
+		{
+
+			mvaddstr(7, j + 13, "-");
+
+
+
+		}
 		for (int i = 0; i < 6; i++)
 		{
+			start_color();
+			init_pair(1, COLOR_CYAN, COLOR_BLACK);
+			init_pair(2, COLOR_RED, COLOR_BLACK);
+			init_pair(3, COLOR_GREEN, COLOR_BLACK);
+			init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
+			init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+			init_pair(6, COLOR_RED, COLOR_WHITE);
+			init_pair(7, COLOR_BLACK, COLOR_WHITE);
+			init_pair(8, COLOR_BLACK, COLOR_BLUE);
+			
+			attrset(COLOR_PAIR(7));
+
+			mvaddstr(i, 13, "{");
 			for (int j = 0; j < 10; j++)
 			{
+
 				if (i < 3)
 				{
 
 
-					start_color();
-					init_pair(1, COLOR_CYAN, COLOR_BLACK);
-					init_pair(2, COLOR_RED, COLOR_BLACK);
-					init_pair(3, COLOR_GREEN, COLOR_BLACK);
-					init_pair(4, COLOR_BLUE, COLOR_BLACK);
-					init_pair(5, COLOR_YELLOW, COLOR_BLACK);
-					init_pair(6, COLOR_RED, COLOR_WHITE);
+					
 					switch (candy[i][j])
 					{
 					case 1:
 						attrset(COLOR_PAIR(1));
-						mvaddstr(i, j, "A"); break;
+						mvaddstr(i, j+ 14, "@"); break;
 
 
 					case 10:
 						attrset(COLOR_PAIR(2));
-						mvaddstr(i, j, "B");	break;
+						mvaddstr(i, j + 14, "@");	break;
 
 					case 100:
 						attrset(COLOR_PAIR(3));
-						mvaddstr(i, j, "C"); break;
+						mvaddstr(i, j + 14, "@"); break;
 
 					case 1000:
 						attrset(COLOR_PAIR(4));
-						mvaddstr(i, j, "D");	break;
+						mvaddstr(i, j + 14, "@");	break;
 
 					case 10000:
 						attrset(COLOR_PAIR(5));
-						mvaddstr(i, j, "E"); break;
+						mvaddstr(i, j + 14, "@"); break;
 					case 100000:
 						attrset(COLOR_PAIR(6));
-						mvaddstr(i, j, "O"); break;
+						mvaddstr(i, j + 14, "@"); break;
 					case -1:
-						mvaddstr(i, j, " "); break;
+						mvaddstr(i, j + 14, " "); break;
 
 					}
 				}
 				else if (i == 3)
 				{
-					attrset(A_REVERSE);//set background
-					mvaddstr(i, j, " ");
-
+					attrset(COLOR_PAIR(8));
+					mvaddstr(i, j + 14, " ");
+					
 				}
 				if(i>=3)
 				switch (candy[i][j])
 				{
 				case 1:
 					attrset(COLOR_PAIR(1));
-					mvaddstr(i+1, j, "A"); break;
+					mvaddstr(i+1, j + 14, "@"); break;
 
 
 				case 10:
 					attrset(COLOR_PAIR(2));
-					mvaddstr(i+1, j, "B");	break;
+					mvaddstr(i+1, j + 14, "@");	break;
 
 				case 100:
 					attrset(COLOR_PAIR(3));
-					mvaddstr(i+1, j, "C"); break;
+					mvaddstr(i+1, j + 14, "@"); break;
 
 				case 1000:
 					attrset(COLOR_PAIR(4));
-					mvaddstr(i+1, j, "D");	break;
+					mvaddstr(i+1, j + 14, "@");	break;
 
 				case 10000:
 					attrset(COLOR_PAIR(5));
-					mvaddstr(i+1, j, "E"); break;
+					mvaddstr(i+1, j + 14, "@"); break;
 				case 100000:
 					attrset(COLOR_PAIR(6));
-					mvaddstr(i+1, j, "O"); break;
+					mvaddstr(i+1, j + 14, "@"); break;
 				case -1:
-					mvaddstr(i+1, j, " "); break;
+					mvaddstr(i+1, j + 14, " "); break;
 
 				}
 
@@ -2566,7 +2594,11 @@ public:
 				}
 
 			}*/
+			attrset(COLOR_PAIR(7));
+			mvaddstr(i, 24, "}");
 		}
+		mvaddstr(6, 13, "{");
+		mvaddstr(6, 24, "}");
 	}
 	bool swapable()
 	{
@@ -5309,6 +5341,15 @@ public:
 		score = 0;
 		while (go_on)
 		{
+			start_color();
+			init_pair(1, COLOR_CYAN, COLOR_BLACK);
+			init_pair(2, COLOR_RED, COLOR_BLACK);
+			init_pair(3, COLOR_GREEN, COLOR_BLACK);
+			init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
+			init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+			init_pair(6, COLOR_RED, COLOR_WHITE);
+			init_pair(7, COLOR_BLACK, COLOR_GREEN);
+			attrset(COLOR_PAIR(5));
 			mvaddstr(1, 30, "target scores : ");
 			mvprintw(1, 50, "%d", target);
 			mvaddstr(2, 30, "your scores : ");
@@ -5385,7 +5426,7 @@ public:
 
 			}
 			//	attrset(A_UNDERLINE);
-			mvaddstr(0, 15, "Normal LEVEL");
+			mvaddstr(0, 0, "Normal LEVEL");
 			mvaddstr(4, 30, "wanna quit game?press q");
 			mvaddstr(5, 30, "Manual:");
 			mvaddstr(6, 30, "press s to select and press t to choose places");
@@ -5406,11 +5447,11 @@ public:
 				attrset(A_REVERSE);//set background
 				if (y > 3)
 				{
-					preX = x;
+					preX = x- 14;
 					preY = y-1;
 				}
 				else {
-					preX = x;
+					preX = x - 14;
 					preY = y;
 				}
 				break;
@@ -5418,12 +5459,12 @@ public:
 			{
 				if (y > 3)
 				{
-					nextX = x;
+					nextX = x - 14;
 					nextY = y - 1;
 				}
 				else
 				{
-					nextX = x;
+					nextX = x - 14;
 					nextY = y;
 				}
 				swap(candy[preY][preX], candy[nextY][nextX]);
@@ -5453,10 +5494,10 @@ public:
 			case KEY_DOWN: ++y; mvaddstr(10, 54, "Down "); break;
 			} // switch (c)
 
-			while (x < 0) x += width;
-			while (x >= width) x -= width;
-			while (y < 0) y += height;
-			while (y >= height) y -= height;
+			while (x < 14) x += 11;
+			while (x >= 24) x -= 10;
+			while (y < 0) y += 7;
+			while (y >= 7) y -= 7;
 			refresh();
 			// while (go_on)
 
