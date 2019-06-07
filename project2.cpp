@@ -92,9 +92,6 @@ public:
 			}
 		}
 		return true;
-	
-	
-	
 	}
 	void outputfruit()
 	{
@@ -5763,6 +5760,7 @@ public:
 				if (j == 4 || j == 5)
 				{
 					candy[i][j] = 87;
+					continue;
 				}
 				temp = (rand() % 5) + 1;
 				switch (temp)
@@ -5784,7 +5782,189 @@ public:
 		}
 
 	}
+	bool shuffle()
+	{
 
+		for (int i = 1; i < 2; i++)
+		{
+			for (int j = 1; j < 3; j++)
+			{
+
+				swap(candy[i][j], candy[i][j - 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j - 1]);
+					return false;
+				}
+				swap(candy[i][j], candy[i][j - 1]);
+
+				swap(candy[i][j], candy[i][j + 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j + 1]);
+					return false;
+
+				}
+				swap(candy[i][j], candy[i][j + 1]);
+
+				swap(candy[i][j], candy[i - 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i - 1][j]);
+					return false;
+				}
+				swap(candy[i][j], candy[i - 1][j]);
+
+				swap(candy[i][j], candy[i + 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i + 1][j]);
+					return false;
+				}
+
+				swap(candy[i][j], candy[i + 1][j]);
+
+			}
+		}
+
+		for (int i = 1; i < 2; i++)
+		{
+			for (int j = 7; j < 9; j++)
+			{
+
+				swap(candy[i][j], candy[i][j - 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j - 1]);
+					return false;
+				}
+				swap(candy[i][j], candy[i][j - 1]);
+
+				swap(candy[i][j], candy[i][j + 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j + 1]);
+					return false;
+
+				}
+				swap(candy[i][j], candy[i][j + 1]);
+
+				swap(candy[i][j], candy[i - 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i - 1][j]);
+					return false;
+				}
+				swap(candy[i][j], candy[i - 1][j]);
+
+				swap(candy[i][j], candy[i + 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i + 1][j]);
+					return false;
+				}
+
+				swap(candy[i][j], candy[i + 1][j]);
+
+			}
+		}
+
+		for (int i = 4; i < 5; i++)
+		{
+			for (int j = 1; j < 3; j++)
+			{
+
+				swap(candy[i][j], candy[i][j - 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j - 1]);
+					return false;
+				}
+				swap(candy[i][j], candy[i][j - 1]);
+
+				swap(candy[i][j], candy[i][j + 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j + 1]);
+					return false;
+
+				}
+				swap(candy[i][j], candy[i][j + 1]);
+
+				swap(candy[i][j], candy[i - 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i - 1][j]);
+					return false;
+				}
+				swap(candy[i][j], candy[i - 1][j]);
+
+				swap(candy[i][j], candy[i + 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i + 1][j]);
+					return false;
+				}
+
+				swap(candy[i][j], candy[i + 1][j]);
+
+			}
+		}
+
+		for (int i = 4; i < 5; i++)
+		{
+			for (int j = 7; j < 9; j++)
+			{
+
+				swap(candy[i][j], candy[i][j - 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j - 1]);
+					return false;
+				}
+				swap(candy[i][j], candy[i][j - 1]);
+
+				swap(candy[i][j], candy[i][j + 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j + 1]);
+					return false;
+
+				}
+				swap(candy[i][j], candy[i][j + 1]);
+
+				swap(candy[i][j], candy[i - 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i - 1][j]);
+					return false;
+				}
+				swap(candy[i][j], candy[i - 1][j]);
+
+				swap(candy[i][j], candy[i + 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i + 1][j]);
+					return false;
+				}
+
+				swap(candy[i][j], candy[i + 1][j]);
+
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+		return true;
+	}
 	void outputfruit()
 	{
 		for (int j = 0; j < 12; j++)
@@ -8802,12 +8982,13 @@ public:
 			}
 			case 'r':
 			{
-
-				do {
-					setfruit();
-				} while (swapable() == 1);
-				break;
-
+				if (shuffle())
+				{
+					do {
+						setfruit();
+					} while (swapable() == 1);
+					break;
+				}
 			}
 			case KEY_LEFT: --x; mvaddstr(10, 54, "Left "); break;
 			case KEY_RIGHT: ++x; mvaddstr(10, 54, "Right"); break;
