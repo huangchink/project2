@@ -12,10 +12,11 @@ public:
 	int c, x = 0, y = 1;
 	int score=0;
 	int target=1000;
-	int remainsteps=20;
+	int remainsteps=1000;
 	int set = 0;
 	int jx=0;
 	int jy=0;
+	
 	void setfruit()
 	{
 		for (int i = 0; i < 6; i++)
@@ -41,12 +42,60 @@ public:
 				}
 			}
 		}
-		
-			candy[jy][jx] = 87;
-		
-		
-	}
 
+		candy[jy][jx] = 87;
+
+	}
+	
+	bool shuffle()
+	{
+		
+		for (int i = 1; i < 6; i++)
+		{
+			for (int j = 1; j < 10; j++)
+			{
+
+				swap(candy[i][j], candy[i][j - 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j - 1]);
+					return false;
+				}
+				swap(candy[i][j], candy[i][j - 1]);
+
+				swap(candy[i][j], candy[i][j+1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j + 1]);
+					return false;
+
+				}
+				swap(candy[i][j], candy[i][j + 1]);
+
+				swap(candy[i][j], candy[i-1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i - 1][j]);
+					return false;
+				}
+				swap(candy[i][j], candy[i - 1][j]);
+
+				swap(candy[i][j], candy[i+1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i + 1][j]);
+					return false;
+				}
+			
+				swap(candy[i][j], candy[i + 1][j]);
+				
+			}
+		}
+		return true;
+	
+	
+	
+	}
 	void outputfruit()
 	{
 		
@@ -108,7 +157,7 @@ public:
 				mvaddstr(i + 1, j + 12, "H"); break;
 			case 100000:
 				attrset(COLOR_PAIR(6));
-				mvaddstr(i + 1, j + 12, "O"); break;
+				mvaddstr(i + 1, j + 12, "@"); break;
 			case -1:
 				mvaddstr(i + 1, j + 12,  " "); break;
 			case 87:
@@ -132,7 +181,7 @@ public:
 		{
 			for (int j = 0; j < 8; j++)
 			{
-				if ((candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000) || (candy[i][j]+candy[i][j+1]+candy[i][j+2]==300000))
+				if ((candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000) || (candy[i][j]+candy[i+1][j]+candy[i+2][j]==300000))
 				{
 					return true;
 				}
@@ -2401,9 +2450,13 @@ public:
 			case 'r':
 			{
 			
-				do  {
-					setfruit();
-				} while (swapable() == 1);
+				
+				if (shuffle() == 1)
+				{
+					do {
+						setfruit();
+					} while (swapable() == 1);
+				}
 				break;
 			
 			}
@@ -2414,7 +2467,7 @@ public:
 			} // switch (c)
 			
 			while (x < 12) x += 10;
-			while (x > 23) x -= 10;
+			while (x > 23) x -= 11;
 			while (y < 1) y += 6;
 			while (y >= 7) y -= 6;
 			refresh();
@@ -2486,7 +2539,96 @@ public:
 	int score = 0;
 	int target = 10000;
 	int remainsteps = 20;
+	bool shuffle()
+	{
 
+		for (int i = 1; i < 2; i++)
+		{
+			for (int j = 1; j < 10; j++)
+			{
+
+				swap(candy[i][j], candy[i][j - 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j - 1]);
+					return false;
+				}
+				swap(candy[i][j], candy[i][j - 1]);
+
+				swap(candy[i][j], candy[i][j + 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j + 1]);
+					return false;
+
+				}
+				swap(candy[i][j], candy[i][j + 1]);
+
+				swap(candy[i][j], candy[i - 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i - 1][j]);
+					return false;
+				}
+				swap(candy[i][j], candy[i - 1][j]);
+
+				swap(candy[i][j], candy[i + 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i + 1][j]);
+					return false;
+				}
+
+				swap(candy[i][j], candy[i + 1][j]);
+
+			}
+		}
+		for (int i = 4; i < 6; i++)
+		{
+			for (int j = 1; j < 10; j++)
+			{
+
+				swap(candy[i][j], candy[i][j - 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j - 1]);
+					return false;
+				}
+				swap(candy[i][j], candy[i][j - 1]);
+
+				swap(candy[i][j], candy[i][j + 1]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i][j + 1]);
+					return false;
+
+				}
+				swap(candy[i][j], candy[i][j + 1]);
+
+				swap(candy[i][j], candy[i - 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i - 1][j]);
+					return false;
+				}
+				swap(candy[i][j], candy[i - 1][j]);
+
+				swap(candy[i][j], candy[i + 1][j]);
+				if (swapable())
+				{
+					swap(candy[i][j], candy[i + 1][j]);
+					return false;
+				}
+
+				swap(candy[i][j], candy[i + 1][j]);
+
+			}
+		}
+		return true;
+
+
+
+	}
 	void setfruit()
 	{
 		for (int i = 0; i < 6; i++)
@@ -2551,24 +2693,24 @@ public:
 					{
 					case 1:
 						attrset(COLOR_PAIR(1));
-						mvaddstr(i, j+ 14, "@"); break;
+						mvaddstr(i, j+ 14, "O"); break;
 
 
 					case 10:
 						attrset(COLOR_PAIR(2));
-						mvaddstr(i, j + 14, "@");	break;
+						mvaddstr(i, j + 14, "O");	break;
 
 					case 100:
 						attrset(COLOR_PAIR(3));
-						mvaddstr(i, j + 14, "@"); break;
+						mvaddstr(i, j + 14, "O"); break;
 
 					case 1000:
 						attrset(COLOR_PAIR(4));
-						mvaddstr(i, j + 14, "@");	break;
+						mvaddstr(i, j + 14, "O");	break;
 
 					case 10000:
 						attrset(COLOR_PAIR(5));
-						mvaddstr(i, j + 14, "@"); break;
+						mvaddstr(i, j + 14, "O"); break;
 					case 100000:
 						attrset(COLOR_PAIR(6));
 						mvaddstr(i, j + 14, "@"); break;
@@ -2588,24 +2730,24 @@ public:
 				{
 				case 1:
 					attrset(COLOR_PAIR(1));
-					mvaddstr(i+1, j + 14, "@"); break;
+					mvaddstr(i+1, j + 14, "O"); break;
 
 
 				case 10:
 					attrset(COLOR_PAIR(2));
-					mvaddstr(i+1, j + 14, "@");	break;
+					mvaddstr(i+1, j + 14, "O");	break;
 
 				case 100:
 					attrset(COLOR_PAIR(3));
-					mvaddstr(i+1, j + 14, "@"); break;
+					mvaddstr(i+1, j + 14, "O"); break;
 
 				case 1000:
 					attrset(COLOR_PAIR(4));
-					mvaddstr(i+1, j + 14, "@");	break;
+					mvaddstr(i+1, j + 14, "O");	break;
 
 				case 10000:
 					attrset(COLOR_PAIR(5));
-					mvaddstr(i+1, j + 14, "@"); break;
+					mvaddstr(i+1, j + 14, "O"); break;
 				case 100000:
 					attrset(COLOR_PAIR(6));
 					mvaddstr(i+1, j + 14, "@"); break;
@@ -5523,12 +5665,13 @@ public:
 			}
 			case 'r':
 			{
-
-				do {
-					setfruit();
-				} while (swapable() == 1);
-				break;
-
+				if (shuffle())
+				{
+					do {
+						setfruit();
+					} while (swapable() == 1);
+					break;
+				}
 			}
 			case KEY_LEFT: --x; mvaddstr(10, 54, "Left "); break;
 			case KEY_RIGHT: ++x; mvaddstr(10, 54, "Right"); break;
@@ -5707,7 +5850,7 @@ public:
 						mvaddstr(i, j + 14, "O"); break;
 					case 100000:
 						attrset(COLOR_PAIR(6));
-						mvaddstr(i, j + 14, "O"); break;
+						mvaddstr(i, j + 14, "@"); break;
 					case -1:
 						mvaddstr(i, j + 14, " "); break;
 
@@ -5744,7 +5887,7 @@ public:
 						mvaddstr(i + 1, j + 14, "O"); break;
 					case 100000:
 						attrset(COLOR_PAIR(6));
-						mvaddstr(i + 1, j + 14, "O"); break;
+						mvaddstr(i + 1, j + 14, "@"); break;
 					case -1:
 						mvaddstr(i + 1, j + 14, " "); break;
 
