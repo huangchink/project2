@@ -12,7 +12,7 @@ public:
 	int c, x = 0, y = 1;
 	int score=0;
 	int target=1000;
-	int remainsteps=1000;
+	int remainsteps=20;
 	int set = 0;
 	int jx=0;
 	int jy=0;
@@ -2778,7 +2778,7 @@ public:
 		{
 			for (int j = 0; j < 8; j++)
 			{
-				if ((candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000) || (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000))
+				if ((candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000) || (candy[i][j] + candy[i][j+1] + candy[i][j+2] == 300000))
 				{
 					return true;
 				}
@@ -6098,7 +6098,7 @@ public:
 		{
 			for (int j = 0; j < 8; j++)
 			{
-				if ((candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000) || (candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000))
+				if ((candy[i][j] + candy[i][j + 1] + candy[i][j + 2] == 300000) || (candy[i][j] + candy[i+2][j] + candy[i+2][j] == 300000))
 				{
 					return true;
 				}
